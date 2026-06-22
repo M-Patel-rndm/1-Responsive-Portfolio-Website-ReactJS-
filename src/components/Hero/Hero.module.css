@@ -1,0 +1,161 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.hero.dark {
+  background-color: #0f0f0f;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero.dark .title {
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.hero.dark .subtitle {
+  color: #00bfff;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.hero.dark .description {
+  color: #ccc;
+}
+
+.ctaButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.ctaButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .imagePlaceholder {
+    font-size: 6rem;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .ctaButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .imagePlaceholder {
+    font-size: 4rem;
+    width: 200px;
+    height: 200px;
+  }
+}
